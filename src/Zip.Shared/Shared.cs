@@ -157,8 +157,48 @@ namespace Ionic.Zip
             return SimplifyFwdSlashPath(pathName);
         }
 
+        /// <summary>
+        /// Sanitize paths in zip files. This means making sure that relative paths in a zip file don't go outside
+        /// the top directory. Entries like something/../../../../Temp/evil.txt get sanitized to Temp/evil.txt
+        /// when extracting
+        /// </summary>
+        /// <param name="path">A path with forward slashes as directory separator</param>
+        /// <returns>sanitized path</returns>
+        public static string SanitizePath(string path)
+        {
+            System.Collections.Generic.List<string> dirs = new System.Collections.Generic.List<string>();
+            int level = 0;
+            foreach (string dir in path.Split('/'))
+            {
+                if (dir == "..")
+                {
+                    if (level == 0)
+                        continue;
+                    level--;
+                }
+                else
+                {
+                    if (dirs.Count - 1 < level)
+                        dirs.Add(dir);
+                    else
+                        dirs[level] = dir;
+                    level++;
+                }
+            }
 
-        static System.Text.Encoding ibm437 = System.Text.Encoding.GetEncoding("IBM437");
+            path = "";
+            for (int i = 0; i < level; i++)
+            {
+                if (i > 0)
+                    path += "/";
+                path += dirs[i];
+            }
+
+            return path;
+        }
+
+
+        //static System.Text.Encoding ibm437 = System.Text.Encoding.GetEncoding("IBM437");
         static System.Text.Encoding utf8 = System.Text.Encoding.GetEncoding("UTF-8");
 
         internal static byte[] StringToByteArray(string value, System.Text.Encoding encoding)
@@ -168,6 +208,41 @@ namespace Ionic.Zip
         }
         internal static byte[] StringToByteArray(string value)
         {
+            System.Text.Encoding ibm437 = null;
+            try
+            {
+                ibm437 = System.Text.Encoding.GetEncoding("IBM437");
+            }
+            catch (Exception /*e*/)
+            {
+
+            }
+#if NETCOREAPP2_0 || NETSTANDARD2_0
+            if (ibm437 == null)
+            {
+                try
+                {
+                    ibm437 = System.Text.CodePagesEncodingProvider.Instance.GetEncoding(1252);
+                }
+                catch (Exception /*e*/)
+                {
+
+                }
+            }
+#elif !WINDOWS_PHONE_APP
+            if (ibm437 == null)
+            {
+                try
+                {
+                    ibm437 = System.Text.Encoding.GetEncoding(1252);
+                }
+                catch (Exception /*e*/)
+                {
+
+                }
+            }
+#endif
+
             return StringToByteArray(value, ibm437);
         }
 

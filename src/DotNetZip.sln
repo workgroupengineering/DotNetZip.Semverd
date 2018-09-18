@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zip DLL", "Zip\Zip DLL.csproj", "{D3B0AD67-44D8-4B3D-BED9-CE1FD6DE2C5A}"
 EndProject
@@ -23,6 +25,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zip.iOS", "Zip.iOS\Zip.iOS.csproj", "{4AD2A092-2C90-4C76-A8D5-4B56F718626F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zip.WP", "Zip.WP\Zip.WP.csproj", "{DDFAFEB7-52C7-4E85-A48D-CA410E94C22F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zip NetStandard", "Zip NetStandard\Zip NetStandard.csproj", "{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListContents", "ListContents\ListContents.csproj", "{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -169,6 +175,38 @@ Global
 		{DDFAFEB7-52C7-4E85-A48D-CA410E94C22F}.Release|Mixed Platforms.Build.0 = Release|x86
 		{DDFAFEB7-52C7-4E85-A48D-CA410E94C22F}.Release|x86.ActiveCfg = Release|x86
 		{DDFAFEB7-52C7-4E85-A48D-CA410E94C22F}.Release|x86.Build.0 = Release|x86
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Debug|ARM.Build.0 = Debug|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Debug|x86.Build.0 = Debug|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Release|ARM.Build.0 = Release|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Release|x86.ActiveCfg = Release|Any CPU
+		{C609AB31-BFBA-47BF-B0C4-CF0FE381C938}.Release|x86.Build.0 = Release|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Debug|ARM.Build.0 = Debug|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Debug|x86.Build.0 = Debug|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Release|ARM.ActiveCfg = Release|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Release|ARM.Build.0 = Release|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Release|x86.ActiveCfg = Release|Any CPU
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -178,6 +216,10 @@ Global
 		{D4BC9EF7-EE33-461C-BCF5-AF0B48217061} = {7CFA8083-4960-4BFE-8DF0-16034C828CDE}
 		{4AD2A092-2C90-4C76-A8D5-4B56F718626F} = {7CFA8083-4960-4BFE-8DF0-16034C828CDE}
 		{DDFAFEB7-52C7-4E85-A48D-CA410E94C22F} = {7CFA8083-4960-4BFE-8DF0-16034C828CDE}
+		{D269BAF7-02BD-4E29-93E9-81E4CBB0BD59} = {F0743B6A-25EB-4D79-B5ED-AFB4F25C91B5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C3B477A-4BA3-4067-BDE0-0B28496004B7}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = DotNetZip.vsmdi
